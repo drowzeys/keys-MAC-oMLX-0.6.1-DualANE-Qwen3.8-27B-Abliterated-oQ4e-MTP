@@ -10,11 +10,36 @@ recipe, with the stock Qwen3.8-27B swapped for the **abliterated** build:
 | Engine | `omlx` 0.6.1 (brew tap `jundot/omlx`), served on `:11500` |
 | Model | [`root4k/Huihui-Qwen3.8-27B-abliterated-oQ4e-mtp`](https://huggingface.co/root4k/Huihui-Qwen3.8-27B-abliterated-oQ4e-mtp) — 17.0 GB |
 | Quant | oQ4e: 4-bit affine gs64, **166 tensors promoted to 5-bit** (all `linear_attn.in_proj_a/b` — the GDN inputs) |
-| Accel | dual-ANE prefill (**MLP-only**) + Lightning **MTP k=2** |
+| Accel | dual-ANE prefill (**MLP-only**) + Lightning **MTP k=3** |
 
 > **Why oQ4e specifically.** The ANE kernel gates on `mode == "affine"` **and gate/up at exactly
 > 4 bits** (`_affine_spec(gate, allowed_bits=(4,))`). oQ5e/oQ6e/oQ8e and every mxfp8/int8 build fail
 > that gate, so the dual-ANE path silently no-ops on them. oQ4e is the only level that keeps it.
+
+
+---
+
+## Results — measured 2026-08-18, Mac Studio M3 Ultra
+
+**Config: `root4k/Huihui-Qwen3.8-27B-abliterated-oQ4e-mtp` · dual-ANE prefill (MLP-only, GDN off) · Lightning MTP k=3**
+
+| | | |
+|---|---:|---|
+| **Decode — code-edit** | **81.1 tok/s** | reps 77.4 / 83.9 / 81.9 · `tok/cycle` 3.56–3.82 · accept 99.5–100% |
+| **Decode — prose** | **59.4 tok/s** | reps 61.3 / 59.9 / 57.0 · accept 65–78% |
+| **Prefill 16K** | **394.7 tok/s** | +21.6% vs GPU (upstream claims +17.7%) |
+| **Prefill 32K** | **371.0 tok/s** | +22.5% vs GPU (upstream claims +18.9%) |
+| **Prefill 4K** | **368.0 tok/s** | +10.3% vs GPU (upstream claims +1.3–3.4%) |
+| **Concurrency** | **78.0 tok/s** agg @ C=4 | saturates ~84 by C=8 |
+| **vs stock (non-ablit)** | **parity** | 71.0 vs 71.0 code-edit, 53.0 vs 55.2 prose, identical prompts |
+| **Baseline, no accel** | 35.4 / 35.8 tok/s | code-edit / prose, MTP off |
+
+**Net: 2.3× decode on code-heavy work and +22% prefill at long context, at zero quality cost from the
+abliteration.** Single stream, 2K padded context, `bench_mtp.py`.
+
+Setup is one command — see [`oneshot-setup.sh`](oneshot-setup.sh); the prebuilt ANE kernel ships in
+[`prebuilt/`](prebuilt/) because Homebrew's bottle does not include it and macOS 26 cannot rebuild it
+without the workaround in §1. Credits in [CREDITS.md](CREDITS.md).
 
 ---
 
@@ -168,20 +193,6 @@ request under concurrency.
 >
 > Same root cause bites model registration: **new model directories are only discovered at startup**,
 > so a symlink added while the server runs will 404 forever even though settings changes hot-reload.
-
-### Headline — abliterated @ k=3, single stream (`bench_mtp.py`, 2K padded context)
-
-| task | tok/s | reps | telemetry |
-|---|---:|---|---|
-| **code-edit** | **81.1** | 77.4, 83.9, 81.9 | `tok/cycle` 3.56–3.82, accept 99.5–100% (k=3 ceiling 4.0) |
-| **prose** | **59.4** | 61.3, 59.9, 57.0 | accept 65–78% |
-
-> **Two benchmarks, two workloads — do not compare them directly.**
-> `bench_mtp.py` uses a **2048-token padded context** and a code-edit task that re-emits a 45-line
-> class verbatim → ~100% draft acceptance, which is where a deeper k pays. `mac_conc_bench.py` uses
-> **short unpadded prompts** (~100–400 tokens) with lower acceptance, so k barely matters there
-> (C=1 measured 50.3/58.5/53.6 at k=2 and 48.7/60.9/56.6 at k=3 — statistically unchanged).
-> Use `bench_mtp` for peak single-stream, `mac_conc_bench` for scaling shape.
 
 ### Abliterated vs stock — identical prompts, back-to-back
 
