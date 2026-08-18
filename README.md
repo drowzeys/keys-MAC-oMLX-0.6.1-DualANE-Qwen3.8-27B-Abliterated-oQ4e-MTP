@@ -169,6 +169,20 @@ request under concurrency.
 > Same root cause bites model registration: **new model directories are only discovered at startup**,
 > so a symlink added while the server runs will 404 forever even though settings changes hot-reload.
 
+### Headline — abliterated @ k=3, single stream (`bench_mtp.py`, 2K padded context)
+
+| task | tok/s | reps | telemetry |
+|---|---:|---|---|
+| **code-edit** | **81.1** | 77.4, 83.9, 81.9 | `tok/cycle` 3.56–3.82, accept 99.5–100% (k=3 ceiling 4.0) |
+| **prose** | **59.4** | 61.3, 59.9, 57.0 | accept 65–78% |
+
+> **Two benchmarks, two workloads — do not compare them directly.**
+> `bench_mtp.py` uses a **2048-token padded context** and a code-edit task that re-emits a 45-line
+> class verbatim → ~100% draft acceptance, which is where a deeper k pays. `mac_conc_bench.py` uses
+> **short unpadded prompts** (~100–400 tokens) with lower acceptance, so k barely matters there
+> (C=1 measured 50.3/58.5/53.6 at k=2 and 48.7/60.9/56.6 at k=3 — statistically unchanged).
+> Use `bench_mtp` for peak single-stream, `mac_conc_bench` for scaling shape.
+
 ### Abliterated vs stock — identical prompts, back-to-back
 
 | task | stock oQ4e | **ablit oQ4e** |
