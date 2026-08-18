@@ -43,6 +43,35 @@ without the workaround in §1. Credits in [CREDITS.md](CREDITS.md).
 
 ---
 
+## Get it
+
+Three ways, pick one. All three land the same four artifacts.
+
+**1. Clone (everything: recipe, scripts, raw results)**
+```bash
+git clone https://github.com/drowzeys/keys-MAC-oMLX-0.6.1-DualANE-Qwen3.8-27B-Abliterated-oQ4e-MTP.git
+cd keys-MAC-oMLX-0.6.1-DualANE-Qwen3.8-27B-Abliterated-oQ4e-MTP
+bash oneshot-setup.sh
+```
+
+**2. Release asset (kernel only, no auth, no git)**
+```bash
+curl -sSLO https://github.com/drowzeys/keys-MAC-oMLX-0.6.1-DualANE-Qwen3.8-27B-Abliterated-oQ4e-MTP/releases/download/v1.0/qwen35_prefill-ane-kernel-omlx0.6.1-py311-mlx0.32.0.tar.gz
+tar xzf qwen35_prefill-ane-kernel-omlx0.6.1-py311-mlx0.32.0.tar.gz
+```
+
+**3. GHCR (kernel + recipe as an OCI package)**
+```bash
+docker run --rm -v "$PWD":/out ghcr.io/drowzeys/keys-mac-omlx-ane-kernel:0.6.1 cp -r /omlx/. /out/
+```
+A carrier image, not a runtime — oMLX runs natively on macOS via brew. This exists so an agent can
+`docker pull` the artifacts on any machine instead of cloning.
+
+Then run `bash oneshot-setup.sh` (or `--verify` against an existing install). Verify integrity any
+time with `shasum -a 256 -c SHA256SUMS` inside the kernel directory.
+
+---
+
 ## 1. Install — and the trap that makes or breaks this
 
 ```bash

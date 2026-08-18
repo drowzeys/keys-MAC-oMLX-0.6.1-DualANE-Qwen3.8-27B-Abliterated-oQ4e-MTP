@@ -1,0 +1,13 @@
+# Carrier image for the prebuilt oMLX 0.6.1 dual-ANE kernel + recipe.
+# Not a runtime — oMLX runs natively on macOS via brew. This exists so an agent
+# can `docker pull` the artifacts instead of cloning, on any machine.
+FROM busybox:1.36
+LABEL org.opencontainers.image.title="oMLX 0.6.1 dual-ANE kernel + Qwen3.8-27B ablit oQ4e recipe"
+LABEL org.opencontainers.image.description="Prebuilt qwen35_prefill ANE kernel (omlx 0.6.1 / py3.11 / mlx 0.32.0 / nanobind 2.13.0) plus one-shot setup. Kernel compiled unmodified from Apache-2.0 jundot/omlx v0.6.1."
+LABEL org.opencontainers.image.source="https://github.com/drowzeys/keys-MAC-oMLX-0.6.1-DualANE-Qwen3.8-27B-Abliterated-oQ4e-MTP"
+LABEL org.opencontainers.image.licenses="Apache-2.0"
+LABEL org.opencontainers.image.vendor="drowzeys"
+COPY prebuilt/qwen35_prefill/ /omlx/kernel/
+COPY oneshot-setup.sh README.md CREDITS.md /omlx/
+COPY scripts/ /omlx/scripts/
+CMD ["/bin/sh","-c","echo 'oMLX 0.6.1 dual-ANE kernel carrier'; echo; echo 'Extract with:'; echo '  docker run --rm -v \"$PWD\":/out <image> cp -r /omlx/. /out/'; echo; ls -la /omlx /omlx/kernel"]
