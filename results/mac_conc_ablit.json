@@ -1,0 +1,125 @@
+{
+  "model": "qwen38-27b-ablit",
+  "rows": [
+    {
+      "task": "prose",
+      "concurrency": 1,
+      "wall_s": 5.09,
+      "total_tokens": 256,
+      "aggregate_tps": 50.3,
+      "per_request_tps": 50.3
+    },
+    {
+      "task": "prose",
+      "concurrency": 2,
+      "wall_s": 9.22,
+      "total_tokens": 512,
+      "aggregate_tps": 55.6,
+      "per_request_tps": 27.8
+    },
+    {
+      "task": "prose",
+      "concurrency": 4,
+      "wall_s": 13.65,
+      "total_tokens": 1024,
+      "aggregate_tps": 75.0,
+      "per_request_tps": 18.8
+    },
+    {
+      "task": "prose",
+      "concurrency": 8,
+      "wall_s": 24.78,
+      "total_tokens": 2048,
+      "aggregate_tps": 82.6,
+      "per_request_tps": 10.4
+    },
+    {
+      "task": "prose",
+      "concurrency": 16,
+      "wall_s": 49.1,
+      "total_tokens": 4096,
+      "aggregate_tps": 83.4,
+      "per_request_tps": 7.6
+    },
+    {
+      "task": "coding",
+      "concurrency": 1,
+      "wall_s": 4.38,
+      "total_tokens": 256,
+      "aggregate_tps": 58.5,
+      "per_request_tps": 58.5
+    },
+    {
+      "task": "coding",
+      "concurrency": 2,
+      "wall_s": 9.16,
+      "total_tokens": 512,
+      "aggregate_tps": 55.9,
+      "per_request_tps": 28.0
+    },
+    {
+      "task": "coding",
+      "concurrency": 4,
+      "wall_s": 13.29,
+      "total_tokens": 1024,
+      "aggregate_tps": 77.0,
+      "per_request_tps": 19.4
+    },
+    {
+      "task": "coding",
+      "concurrency": 8,
+      "wall_s": 24.33,
+      "total_tokens": 2048,
+      "aggregate_tps": 84.2,
+      "per_request_tps": 10.6
+    },
+    {
+      "task": "coding",
+      "concurrency": 16,
+      "wall_s": 48.65,
+      "total_tokens": 4096,
+      "aggregate_tps": 84.2,
+      "per_request_tps": 7.7
+    },
+    {
+      "task": "edit",
+      "concurrency": 1,
+      "wall_s": 4.77,
+      "total_tokens": 256,
+      "aggregate_tps": 53.6,
+      "per_request_tps": 53.6
+    },
+    {
+      "task": "edit",
+      "concurrency": 2,
+      "wall_s": 10.71,
+      "total_tokens": 512,
+      "aggregate_tps": 47.8,
+      "per_request_tps": 24.0
+    },
+    {
+      "task": "edit",
+      "concurrency": 4,
+      "wall_s": 16.48,
+      "total_tokens": 1024,
+      "aggregate_tps": 62.1,
+      "per_request_tps": 15.6
+    },
+    {
+      "task": "edit",
+      "concurrency": 8,
+      "wall_s": 30.82,
+      "total_tokens": 2048,
+      "aggregate_tps": 66.5,
+      "per_request_tps": 8.4
+    },
+    {
+      "task": "edit",
+      "concurrency": 16,
+      "wall_s": 61.63,
+      "total_tokens": 4096,
+      "aggregate_tps": 66.5,
+      "per_request_tps": 5.8
+    }
+  ]
+}

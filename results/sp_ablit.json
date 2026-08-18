@@ -1,0 +1,90 @@
+[
+  {
+    "tag": "ablit",
+    "task": "prose",
+    "rep": 0,
+    "decode_tps": 51.63767407081452,
+    "gen_tokens": 256,
+    "ttft": 29.968745292004314,
+    "total": 34.90700025000842,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "ablit",
+    "task": "prose",
+    "rep": 1,
+    "decode_tps": 50.8757588532133,
+    "gen_tokens": 256,
+    "ttft": 5.273427667008946,
+    "total": 10.285637916997075,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "ablit",
+    "task": "prose",
+    "rep": 2,
+    "decode_tps": 50.2777430461811,
+    "gen_tokens": 256,
+    "ttft": 5.287612874992192,
+    "total": 10.359439583000494,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "ablit",
+    "task": "prose",
+    "rep": 3,
+    "decode_tps": 51.32453530169656,
+    "gen_tokens": 256,
+    "ttft": 5.352150874998188,
+    "total": 10.320534874990699,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "ablit",
+    "task": "codeedit",
+    "rep": 0,
+    "decode_tps": 68.83599091676084,
+    "gen_tokens": 256,
+    "ttft": 6.081910332999541,
+    "total": 9.786367792010424,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "ablit",
+    "task": "codeedit",
+    "rep": 1,
+    "decode_tps": 73.05988141884004,
+    "gen_tokens": 256,
+    "ttft": 6.082470416004071,
+    "total": 9.57275804100209,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "ablit",
+    "task": "codeedit",
+    "rep": 2,
+    "decode_tps": 72.13118881177078,
+    "gen_tokens": 256,
+    "ttft": 6.106695875001606,
+    "total": 9.641921125003137,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "ablit",
+    "task": "codeedit",
+    "rep": 3,
+    "decode_tps": 67.24719973402169,
+    "gen_tokens": 256,
+    "ttft": 6.025316374987597,
+    "total": 9.817295832996024,
+    "prompt_tokens": 2351,
+    "cached": 0
+  }
+]

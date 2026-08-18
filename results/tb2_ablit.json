@@ -1,0 +1,112 @@
+[
+  {
+    "tag": "tb2",
+    "task": "prose",
+    "rep": 0,
+    "decode_tps": 66.58867739840032,
+    "gen_tokens": 256,
+    "ttft": 5.339177290996304,
+    "total": 9.168657165995683,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "prose",
+    "rep": 1,
+    "decode_tps": 52.88260304812858,
+    "gen_tokens": 256,
+    "ttft": 5.176683792000404,
+    "total": 9.998685457991087,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "prose",
+    "rep": 2,
+    "decode_tps": 50.123218349927164,
+    "gen_tokens": 256,
+    "ttft": 5.24053283399553,
+    "total": 10.327995458996156,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "prose",
+    "rep": 3,
+    "decode_tps": 54.70582892487746,
+    "gen_tokens": 256,
+    "ttft": 5.227429791004397,
+    "total": 9.888724666001508,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "prose",
+    "rep": 4,
+    "decode_tps": 51.94872528398197,
+    "gen_tokens": 256,
+    "ttft": 5.347235084002023,
+    "total": 10.255921459000092,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "codeedit",
+    "rep": 0,
+    "decode_tps": 72.38917357203029,
+    "gen_tokens": 256,
+    "ttft": 6.089662750004209,
+    "total": 9.612288958000136,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "codeedit",
+    "rep": 1,
+    "decode_tps": 71.79471526582017,
+    "gen_tokens": 256,
+    "ttft": 6.021575042002951,
+    "total": 9.57336850000138,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "codeedit",
+    "rep": 2,
+    "decode_tps": 71.53484174589234,
+    "gen_tokens": 256,
+    "ttft": 6.058445582995773,
+    "total": 9.623142083000857,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "codeedit",
+    "rep": 3,
+    "decode_tps": 69.60197610173266,
+    "gen_tokens": 256,
+    "ttft": 6.089500874993973,
+    "total": 9.75318995800626,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "tb2",
+    "task": "codeedit",
+    "rep": 4,
+    "decode_tps": 69.54718057375699,
+    "gen_tokens": 256,
+    "ttft": 6.09486866700172,
+    "total": 9.761444333998952,
+    "prompt_tokens": 2351,
+    "cached": 0
+  }
+]

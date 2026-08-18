@@ -1,0 +1,112 @@
+[
+  {
+    "tag": "quiet_ablit",
+    "task": "prose",
+    "rep": 0,
+    "decode_tps": 55.44353656447313,
+    "gen_tokens": 256,
+    "ttft": 26.47767079199548,
+    "total": 31.076944500004174,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "prose",
+    "rep": 1,
+    "decode_tps": 55.53272593082327,
+    "gen_tokens": 256,
+    "ttft": 5.3067326250020415,
+    "total": 9.898619584011612,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "prose",
+    "rep": 2,
+    "decode_tps": 59.90333950630294,
+    "gen_tokens": 256,
+    "ttft": 5.303185416996712,
+    "total": 9.560043249992304,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "prose",
+    "rep": 3,
+    "decode_tps": 56.43057577203078,
+    "gen_tokens": 256,
+    "ttft": 5.290663042003871,
+    "total": 9.80948987499869,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "prose",
+    "rep": 4,
+    "decode_tps": 59.35471590467648,
+    "gen_tokens": 256,
+    "ttft": 5.273911833995953,
+    "total": 9.570116375005455,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "codeedit",
+    "rep": 0,
+    "decode_tps": 70.03095770120301,
+    "gen_tokens": 256,
+    "ttft": 6.086663624999346,
+    "total": 9.72791041599703,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "codeedit",
+    "rep": 1,
+    "decode_tps": 70.6856069728868,
+    "gen_tokens": 256,
+    "ttft": 6.07691116699425,
+    "total": 9.684434832990519,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "codeedit",
+    "rep": 2,
+    "decode_tps": 67.92280195009464,
+    "gen_tokens": 256,
+    "ttft": 6.052289291008492,
+    "total": 9.806551375004346,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "codeedit",
+    "rep": 3,
+    "decode_tps": 73.4884426994992,
+    "gen_tokens": 256,
+    "ttft": 6.095656917008455,
+    "total": 9.56559029201162,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_ablit",
+    "task": "codeedit",
+    "rep": 4,
+    "decode_tps": 71.18563219366474,
+    "gen_tokens": 256,
+    "ttft": 6.075403333990835,
+    "total": 9.657586874993285,
+    "prompt_tokens": 2351,
+    "cached": 0
+  }
+]

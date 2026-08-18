@@ -1,0 +1,90 @@
+[
+  {
+    "tag": "k3v",
+    "task": "prose",
+    "rep": 0,
+    "decode_tps": 59.02284212913045,
+    "gen_tokens": 256,
+    "ttft": 26.131090124996263,
+    "total": 30.45145137500367,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "k3v",
+    "task": "prose",
+    "rep": 1,
+    "decode_tps": 53.40379609735502,
+    "gen_tokens": 256,
+    "ttft": 5.301969291991554,
+    "total": 10.076910749994568,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "k3v",
+    "task": "prose",
+    "rep": 2,
+    "decode_tps": 56.04489217834138,
+    "gen_tokens": 256,
+    "ttft": 5.202770082993084,
+    "total": 9.75269408299937,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "k3v",
+    "task": "prose",
+    "rep": 3,
+    "decode_tps": 52.17959853247533,
+    "gen_tokens": 256,
+    "ttft": 5.32351929199649,
+    "total": 10.210486750002019,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "k3v",
+    "task": "codeedit",
+    "rep": 0,
+    "decode_tps": 84.33888039229154,
+    "gen_tokens": 256,
+    "ttft": 6.074334292003186,
+    "total": 9.09785083400493,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "k3v",
+    "task": "codeedit",
+    "rep": 1,
+    "decode_tps": 84.11938453030893,
+    "gen_tokens": 256,
+    "ttft": 5.895687707990874,
+    "total": 8.927093624995905,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "k3v",
+    "task": "codeedit",
+    "rep": 2,
+    "decode_tps": 78.59413382662778,
+    "gen_tokens": 256,
+    "ttft": 5.898724750004476,
+    "total": 9.143241708006826,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "k3v",
+    "task": "codeedit",
+    "rep": 3,
+    "decode_tps": 78.95406301657472,
+    "gen_tokens": 256,
+    "ttft": 5.912421290995553,
+    "total": 9.142147416001535,
+    "prompt_tokens": 2351,
+    "cached": 0
+  }
+]

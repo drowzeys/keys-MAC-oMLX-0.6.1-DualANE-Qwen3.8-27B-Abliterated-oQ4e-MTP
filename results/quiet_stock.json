@@ -1,0 +1,112 @@
+[
+  {
+    "tag": "quiet_stock",
+    "task": "prose",
+    "rep": 0,
+    "decode_tps": 58.62493322440425,
+    "gen_tokens": 256,
+    "ttft": 25.233083665996674,
+    "total": 29.582768790991395,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "prose",
+    "rep": 1,
+    "decode_tps": 56.16944176184391,
+    "gen_tokens": 256,
+    "ttft": 5.279648666997673,
+    "total": 9.819483708997723,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "prose",
+    "rep": 2,
+    "decode_tps": 61.26387187498928,
+    "gen_tokens": 256,
+    "ttft": 5.233445000005304,
+    "total": 9.39576762499928,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "prose",
+    "rep": 3,
+    "decode_tps": 53.82511949921913,
+    "gen_tokens": 256,
+    "ttft": 5.116916291997768,
+    "total": 9.854481250004028,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "prose",
+    "rep": 4,
+    "decode_tps": 57.21666770838363,
+    "gen_tokens": 256,
+    "ttft": 5.2766405410075095,
+    "total": 9.733383833008702,
+    "prompt_tokens": 2085,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "codeedit",
+    "rep": 0,
+    "decode_tps": 73.53918641181461,
+    "gen_tokens": 256,
+    "ttft": 6.091674832990975,
+    "total": 9.559213874992565,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "codeedit",
+    "rep": 1,
+    "decode_tps": 68.03488451508146,
+    "gen_tokens": 256,
+    "ttft": 6.064717958986876,
+    "total": 9.812795166988508,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "codeedit",
+    "rep": 2,
+    "decode_tps": 72.28923091385003,
+    "gen_tokens": 256,
+    "ttft": 6.002659916994162,
+    "total": 9.53015629199217,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "codeedit",
+    "rep": 3,
+    "decode_tps": 73.67239545994022,
+    "gen_tokens": 256,
+    "ttft": 6.079159375003655,
+    "total": 9.540428666005027,
+    "prompt_tokens": 2351,
+    "cached": 0
+  },
+  {
+    "tag": "quiet_stock",
+    "task": "codeedit",
+    "rep": 4,
+    "decode_tps": 70.20875012944525,
+    "gen_tokens": 256,
+    "ttft": 6.089825333998306,
+    "total": 9.72185124999669,
+    "prompt_tokens": 2351,
+    "cached": 0
+  }
+]

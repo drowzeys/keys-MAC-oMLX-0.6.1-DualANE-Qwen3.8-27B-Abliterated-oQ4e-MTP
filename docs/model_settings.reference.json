@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "models": {
+    "dsv4f-2p4bit": {
+      "mtp_enabled": true
+    },
+    "mlx-community--DeepSeek-V4-Flash-0731-2.4bit-mixed": {
+      "mtp_enabled": true
+    },
+    "dsv4f-mxfp4": {
+      "mtp_enabled": true,
+      "enable_thinking": false,
+      "max_context_window": 1048576
+    },
+    "dsv4f-mxfp4-ablit": {
+      "mtp_enabled": true,
+      "enable_thinking": false,
+      "max_context_window": 1048576
+    },
+    "dsv4f-mxfp4-stock": {
+      "mtp_enabled": true,
+      "enable_thinking": false,
+      "max_context_window": 1048576
+    },
+    "qwen38-27b-oq4e": {
+      "mtp_enabled": true,
+      "qwen35_ane_prefill_enabled": true,
+      "qwen35_ane_prefill_sequence_length": 2048,
+      "qwen35_ane_prefill_fraction": 0.53,
+      "qwen35_ane_prefill_max_layers": 64,
+      "qwen35_ane_prefill_dual_ane": true,
+      "qwen35_ane_prefill_gdn": false,
+      "qwen35_ane_prefill_gdn_fraction": 0.5,
+      "qwen35_ane_prefill_gdn_max_layers": 0,
+      "mtp_num_draft_tokens": 2
+    },
+    "qwen38-27b-8bit": {
+      "qwen35_ane_prefill_enabled": false,
+      "mtp_enabled": false
+    },
+    "qwen38-27b-ablit": {
+      "qwen35_ane_prefill_enabled": true,
+      "qwen35_ane_prefill_sequence_length": 2048,
+      "qwen35_ane_prefill_fraction": 0.53,
+      "qwen35_ane_prefill_max_layers": 64,
+      "qwen35_ane_prefill_dual_ane": true,
+      "qwen35_ane_prefill_gdn": false,
+      "qwen35_ane_prefill_gdn_max_layers": 0,
+      "mtp_enabled": true,
+      "mtp_num_draft_tokens": 2
+    }
+  }
+}
